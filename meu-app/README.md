@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+�� Objetivo 
+O aluno deverá desenvolver um aplicativo simples em React Native com Expo, aplicando os conceitos vistos em aula: 
+● componentes base, 
+● props, 
+● JSX, 
+● componentes personalizados. 
+O app deverá rodar no navegador (Web), sem necessidade de celular ou emulador. 
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+�� Descrição do Trabalho 
+O aplicativo deve ser um App de Apresentação Pessoal, contendo: 
+● Um cabeçalho (Header) fixo, com um título (exemplo: “Meu App de Apresentação”). ● Um componente personalizado (Card), que receba via props: 
+○ nome → o nome do aluno. 
+○ descricao → um hobby, interesse ou frase curta. 
+○ imagem → pode ser uma foto pessoal ou uma imagem da internet.
+● O App.js deve organizar os componentes, exibindo pelo menos dois Cards diferentes. 
+● O projeto deve usar pelo menos 3 componentes base do React Native (ex.: Text, Image, ScrollView, Button, TextInput). 
+● Caso o conteúdo ultrapasse a tela, deve usar ScrollView para permitir rolagem. 
 
-## Get started
+�� Estrutura sugerida dos arquivos 
+● App.js → organiza os componentes. 
+● Header.js → componente com título fixo. 
+● Card.js → componente que recebe props (nome, descricao, imagem). ● assets/ → pasta para imagens usadas no app (se houver). 
 
-1. Install dependencies
+�� Etapas a seguir 
+Criar o projeto 
+npx create-expo-app meu-app 
+cd meu-app 
+npm install 
+npm run web 
 
-   ```bash
-   npm install
-   ```
+1. �� Verifique se abre no navegador. 
+2. Criar o componente Header 
+○ Arquivo: Header.js. 
+○ Mostrar um título fixo no topo da tela (por exemplo: “Meu App de 
+Apresentação”). 
+3. Criar o componente Card
+○ Arquivo: Card.js. 
+○ Receber props (nome, descricao, imagem). 
+○ Mostrar as informações organizadas em uma caixinha. 
+Exemplo de uso no App: 
+<Card nome="Maria" descricao="Gosto de música" imagem={...} /> <Card nome="João" descricao="Curto esportes" imagem={...} /> 
+○ 
+4. Editar o App.js 
+○ Importar e usar o Header no topo. 
+○ Mostrar pelo menos dois Cards diferentes logo abaixo. 
+Testar no navegador 
+npm run web 
 
-2. Start the app
+5. �� Conferir se: 
+○ O título aparece no topo. 
+○ Os Cards aparecem com nome, descrição e imagem. 
+○ Se o conteúdo passa da tela, a rolagem funciona. 
 
-   ```bash
-   npx expo start
-   ```
+�� Como rodar no navegador (Web) 
+No terminal, dentro da pasta do projeto: 
+npm install 
+npx expo start --web 
 
-In the output, you'll find options to open the app in a
+�� O app abrirá no navegador (geralmente em http://localhost:19006).
+✅ Critérios de Avaliação 
+● Estrutura organizada do projeto. 
+● Uso correto de pelo menos 3 componentes base. 
+● Criação e uso de componente personalizado com props. 
+● Criatividade (cores, imagens, textos, estilo). 
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+�� Entrega do Trabalho 
+● Compactar a pasta do projeto em .zip (sem a pasta node_modules/). 
+Nomear o arquivo assim: 
+NomeAluno_TrabalhoBimestre.zip 
+● (Exemplo: MariadaSilva_TrabalhoBimestre.zip) 
+● Enviar para o e-mail: patricia.bassan@unisantacruz.edu.br 
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+�� Checklist do Aluno 
+● Projeto roda no navegador com npx expo start --web. 
+● Header criado e exibido no topo. 
+● Card criado, recebendo props (nome, descricao, imagem). ● Uso de pelo menos 3 componentes base (Text, Image, ScrollView, etc.). ● Conteúdo rolável com ScrollView (se necessário). 
+● Projeto enviado em .zip sem node_modules/.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
