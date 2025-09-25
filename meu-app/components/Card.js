@@ -1,12 +1,21 @@
 import React, { useState } from "react";
-import { View, Text, Image, StyleSheet, Modal, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Modal,
+  TouchableOpacity,
+} from "react-native";
 
 export default function Card({ nome, descricao, imagem }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.card}>
-      <Image source={{ uri: imagem }} style={styles.image} />
+
+      <Image source={imagem} style={styles.image} />
+
       <Text style={styles.name}>{nome}</Text>
       <Text style={styles.description}>{descricao}</Text>
 
@@ -16,15 +25,18 @@ export default function Card({ nome, descricao, imagem }) {
       >
         <Text style={styles.buttonText}>Ver Imagem</Text>
       </TouchableOpacity>
-    
+
       <Modal
         visible={modalVisible}
         transparent={true}
         animationType="fade"
         onRequestClose={() => setModalVisible(false)}
       >
-        <TouchableOpacity style={styles.modalContainer} onPress={() => setModalVisible(false)}>
-          <Image source={{ uri: imagem }} style={styles.fullImage} />
+        <TouchableOpacity
+          style={styles.modalContainer}
+          onPress={() => setModalVisible(false)}
+        >
+          <Image source={imagem} style={styles.fullImage} />
         </TouchableOpacity>
       </Modal>
     </View>
@@ -62,11 +74,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   button: {
-    backgroundColor: "#00838f",
+    backgroundColor: "#fa8072",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 8,
-    marginTop: 15, 
+    marginTop: 15,
   },
   buttonText: {
     color: "#fff",

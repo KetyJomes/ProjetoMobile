@@ -12,12 +12,12 @@ export default function App() {
         <Card
           nome="Ketlyn"
           descricao="Adoro desenhar e assistir séries"
-          imagem="https://picsum.photos/200/300"
+          imagem={require("./IMG_1714.jpeg")}
         />
         <Card
           nome="Sofia"
           descricao="Curto esportes e música"
-          imagem="https://picsum.photos/200/301"
+          imagem={require("./IMG_4060.jpeg")}
         />
       </ScrollView>
       <View style={styles.footer} />
@@ -28,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff4e1",
   },
   content: {
     padding: 20,
@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
     paddingBottom: 80, 
   },
   footer: {
-    height: 100,          
-    backgroundColor: "#00838f", 
+    height: 150,          
+    backgroundColor: "#ffbba8", 
     width: "100%",
     position: "absolute",
     bottom: 0,
